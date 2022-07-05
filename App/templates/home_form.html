@@ -1,0 +1,57 @@
+<!DOCTYPE httempml>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django API Bookstore</title>
+    {% block title %} <h1 id="home_title"> Home </h1> {% endblock %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'site-styling.css' %}" >
+
+
+</head>
+
+
+<body>
+    <hr/>
+
+    <div>
+        <big><h3 id="books_available">See available books</h3></big>
+
+        <b id="books">Books: </b>
+        <form action="" id="book_form" method="POST">
+            {% csrf_token %}
+            {{choices_form.as_p}}
+            <input type="submit" value="Select" name="book_retrieve"/>
+        </form>
+
+    </div>
+
+    {% if Book.id >= 0 %}
+        <p id="selection"> Current Selection: {{ Book.title }}</p>
+
+    {% endif %}
+
+
+
+    <div class="grid-container">
+      <div class="item1"  id="id_title">{{ Book.title }}</div>
+      <div class="item2">Description (coming soon)</div>
+      <div class="item3">{{ Book.release_date }}</div>
+      <div class="item4" id="id_picture">Picture (coming soon)</div>
+      <div class="item5">{{ Book.author }}</div>
+      <div class="item56">{{ Book.genre }}</div>
+    </div>
+
+    <div>
+    <br>
+    <big><h3 id="add_new">Add a new book</h3></big>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="save">Submit</button>
+    <form/>
+</body>
+</html>
+
+</div>
