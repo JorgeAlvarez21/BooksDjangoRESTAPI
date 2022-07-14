@@ -12,12 +12,14 @@ class new_book_insert(forms.Form):
 
 
 books_list = Book.objects.all()
+print(books_list)
 books_ls = []
 for book in books_list:
     if not books_ls:
-        books_ls.append(("default", "------------------"))
+        books_ls.append(("default", "------------"))
     else:
         item = books_ls.append((book.id, f'{book.title}, By: {book.author}'))
+
 
 class BookForm(forms.Form):
     book_choice = forms.ChoiceField(choices=books_ls,

@@ -1,110 +1,153 @@
 
 body {
-    background-color : rgba(235,245,250);
+    background-color: #DBE2E6;
 }
 
 #home_title {
-    margin:10px;
-    left:250px;
-    position:relative;
-    font-size: 60px;
+    margin: 10px;
+    left: 250px;
+    position: relative;
+    font-size: 50px;
     margin-top: 20px;
 }
 
+
 #books_available {
-    margin-left: 20px;
+    margin-left: 40px;
     font-size: 35px;
 }
 
-#books {
-    font-size: 25px;
-}
 #add_new {
-    margin-left: 20px;
+    margin-left: 40px;
     font-size: 35px;
 }
 
 #selection {
-    font-size:20;
+    font-size: 20;
+    margin-left: 530px;
 }
+
+.dropdown_c {
+
+    margin-bottom: 60px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.dropdown_c #dropdown_form select {
+    width: 270px;
+    height: 30px;
+    margin-left: 80px;
+    box-sizing: border-box;
+
+}
+
+
+.dropdown_c #book_select {
+    width: 100px;
+    background-color: #ED9F31;
+    color: white;
+    padding: 7px 9px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: static;
+    vertical-align: middle;
+}
+
 
 input[type=text], select {
-  width: 150px;
-  height:30px;
-  padding: 12px 10px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=submit] {
-  width: 7%;
-  background-color: rgba(12, 160, 70);
-  color: white;
-  padding: 7px 9px;
-  margin: 10px 5;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-button[type=submit] {
-  width: 7%;
-  background-color: rgba(12, 80, 120);
-  color: white;
-  padding: 7px 9px;
-  margin: 10px 5;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    width: 200px;
+    height: 30px;
+    margin: 8px 0px 0px 25px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.add_new_form {
-    font-size: 30px;
-    font-style: oblique;
+button[type=submit] {
+    width: 100px;
+    height: 35px;
+
+    background-color: rgba(12, 80, 120);
+    color: white;
+    padding: 7px 9px;
+    border: 1px solid #ccc;
+    margin: 10px 0px 0px 25px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
 
 
 }
 /* Selection Table */
 
 .grid-container {
-    fontsize:20px
+    margin-left: 50px;
+    font-size: 20px
 }
 
-    .item1 { grid-area: header; }
-    .item2 { grid-area: content; }
-    .item3 { grid-area: release_date; }
-    .item4 { grid-area: picture; }
-    .item5 { grid-area: author; }
-    .item5 { grid-area: genre; }
+.item1 {
+    grid-area: header;
+}
 
-    .grid-container {
-      display: grid;
-      grid-template-areas:
+.item2 {
+    grid-area: content;
+}
+
+.item3 {
+    grid-area: release_date;
+}
+
+.item4 {
+    grid-area: picture;
+}
+
+.item5 {
+    grid-area: author;
+}
+
+.item5 {
+    grid-area: genre;
+}
+
+.grid-container {
+    margin-left: 50px;
+    display: grid;
+    grid-template-areas:
         'header       header  header  picture  picture'
         'author       content content picture picture'
         'genre       content content picture picture'
         'release_date content content picture picture';
-      gap: 10px;
-      width: 700px;
-      background-color: #2196F3;
-      padding: 10px;
-        background-color: rgba(240, 140, 190, 0.9);
-    }
+    gap: 10px;
+    width: 700px;
+    padding: 10px;
+    background-color: #dbe2e6;
+    border-style: outset;
+}
 
-    .grid-container > div {
-      background-color: rgba(235,255,255);
-      text-align: left;
-      padding: 10px ;
-      font-size: 18px;
-      align-content: start;
-    }
+.grid-container > div {
+    background-color: #ebf5fa;
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;
+    align-content: start;
+}
 
-    .grid-container > #id_title {
-        font-size: 25px;
-        text-align: center;
-    }
+.grid-container > #id_title {
+    font-size: 25px;
+    text-align: center;
+}
 
-    .grid-container > #id_picture {
+.grid-container > #id_picture {
 
-    }
+}
+
+
+#book_info {
+    margin-left: 50px;
+    display: block;
+}

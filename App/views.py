@@ -86,9 +86,8 @@ def form_home(request):
 
             new_book = Book(title=title, author=author, genre=genre, date=date, release_date=release_date)
             new_book.save()
-            choices_form = BookForm()
 
-        elif choice_selected.is_valid():
+        if choice_selected.is_valid():
             try:
                 book_id = choice_selected.cleaned_data['book_choice']
                 if book_id != 'default':
@@ -97,8 +96,7 @@ def form_home(request):
             except NameError:
                 print('Book does not exist.')
 
-
-
+        choices_form = BookForm()
 
     context["form"] = form
     context["choices_form"] = choices_form
