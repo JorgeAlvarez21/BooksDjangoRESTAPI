@@ -1,0 +1,153 @@
+
+body {
+    background-color: #DBE2E6;
+}
+
+#home_title {
+    margin: 10px;
+    left: 250px;
+    position: relative;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+
+#books_available {
+    margin-left: 40px;
+    font-size: 35px;
+}
+
+#add_new {
+    margin-left: 40px;
+    font-size: 35px;
+}
+
+#selection {
+    font-size: 20;
+    margin-left: 530px;
+}
+
+.dropdown_c {
+
+    margin-bottom: 60px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.dropdown_c #dropdown_form select {
+    width: 270px;
+    height: 30px;
+    margin-left: 80px;
+    box-sizing: border-box;
+
+}
+
+
+.dropdown_c #book_select {
+    width: 100px;
+    background-color: #ED9F31;
+    color: white;
+    padding: 7px 9px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: static;
+    vertical-align: middle;
+}
+
+
+input[type=text], select {
+    width: 200px;
+    height: 30px;
+    margin: 8px 0px 0px 25px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    width: 100px;
+    height: 35px;
+
+    background-color: rgba(12, 80, 120);
+    color: white;
+    padding: 7px 9px;
+    border: 1px solid #ccc;
+    margin: 10px 0px 0px 25px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+}
+/* Selection Table */
+
+.grid-container {
+    margin-left: 50px;
+    font-size: 20px
+}
+
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: content;
+}
+
+.item3 {
+    grid-area: release_date;
+}
+
+.item4 {
+    grid-area: picture;
+}
+
+.item5 {
+    grid-area: author;
+}
+
+.item5 {
+    grid-area: genre;
+}
+
+.grid-container {
+    margin-left: 50px;
+    display: grid;
+    grid-template-areas:
+        'header       header  header  picture  picture'
+        'author       content content picture picture'
+        'genre       content content picture picture'
+        'release_date content content picture picture';
+    gap: 10px;
+    width: 700px;
+    padding: 10px;
+    background-color: #dbe2e6;
+    border-style: outset;
+}
+
+.grid-container > div {
+    background-color: #ebf5fa;
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;
+    align-content: start;
+}
+
+.grid-container > #id_title {
+    font-size: 25px;
+    text-align: center;
+}
+
+.grid-container > #id_picture {
+
+}
+
+
+#book_info {
+    margin-left: 50px;
+    display: block;
+}
